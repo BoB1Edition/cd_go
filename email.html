@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+	<BODY>
+        <div align="center"> <img src="cid:image1" alt=""></div>
+		<TABLE BORDER>
+
+			<CAPTION><img src="cid:image2" align="bottom"><br><br>CALL DETAILS</CAPTION>
+			<thead WIDTH=400px >
+            <tr>
+				<TD bgcolor="red">Status</TD>
+				<TD bgcolor="red">Date</TD>
+				<!--TD bgcolor="red">Time</TD-->
+				<TD bgcolor="red">Duration</TD>
+				<TD bgcolor="red">Caller Number</TD>
+				<TD bgcolor="red">Incoming Line</TD>
+                <!--TD bgcolor="red">VDN</TD-->
+            </tr>
+			</Thead>
+			<TR bgcolor="beer">
+        {{ $table := .}}
+				<TD>{{ $table.Disposition }}</td>
+				<TD>{{ $table.Calldate }}</td>
+				<TD>{{ $table.Duration }}</TD>
+				<TD>{{ $table.Src }}</TD>
+				<TD>{{ $table.Dst }}</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>
